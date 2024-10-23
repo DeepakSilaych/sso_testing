@@ -2,7 +2,6 @@
 // pages/profile.tsx
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-import { useAuth } from '@/context/AuthContext';
 import { motion } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
 
