@@ -5,7 +5,8 @@ const LoginButton: FC = () => {
   const router = useRouter();
 
   const handleLogin = () => {
-    router.push('http://localhost:8000/project/e2a23a12-2a8e-4af0-80ec-64971b76d4f0/ssocall');
+    const ssoUrl = process.env.NEXT_PUBLIC_SSO_URL;
+    router.push(`https://sso.tech-iitb.org/project/${ssoUrl}/ssocall`);
   };
 
   return (

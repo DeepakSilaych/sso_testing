@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 interface UserProfile {
   name: string;
@@ -45,6 +46,11 @@ const ProfilePage: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <Head>
+        <title>ITC Profiles</title>
+        <meta name="description" content="Experience seamless single sign-on integration" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <h1 className="text-2xl font-bold mb-4">User Profile</h1>
       <div className="bg-white p-6 rounded shadow-lg w-96">
         <p><strong>Name:</strong> {profile.name}</p>
