@@ -6,12 +6,13 @@ const LoginButton: FC = () => {
 
   const handleLogin = () => {
     const ssoUrl = process.env.NEXT_PUBLIC_SSO_URL;
-    router.push(`https://sso.tech-iitb.org/project/${ssoUrl}/ssocall`);
+    const api = process.env.NEXT_PUBLIC_API_URL;
+    router.push(api + '/project/' + ssoUrl + '/ssocall');
   };
 
   return (
     <button
-      className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+      className="bg-white text-blue-500 font-extrabold  px-6 py-2 rounded hover:bg-gray-200 hover:text-blue-700 transition-colors"
       onClick={handleLogin}
     >
       Login with SSO
